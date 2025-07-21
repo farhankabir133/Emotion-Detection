@@ -1,0 +1,66 @@
+Build a modern, interactive web application that detects emotions from a sequence of English text using an existing trained AI model.
+
+🔹 General Requirements:
+The web app should be responsive and have a modern, sleek UI with smooth animations and interactions.
+
+The front end must be highly attractive and visually clean, suitable for professional/public use.
+
+Emotion classes should be displayed clearly (e.g., Happy, Sad, Angry, Fear, Neutral, etc.).
+
+The AI model for classification is already trained and ready to be integrated (e.g., via a .pkl, .pt, .joblib, or API).
+
+🖼️ Front-End Requirements:
+Use React.js with Tailwind CSS or Next.js for a modern UI.
+
+Use smooth transitions/animations (Framer Motion or CSS transitions).
+
+Main features:
+
+A text input field (multiline, interactive).
+
+"Analyze Emotion" button.
+
+A dynamic result display section showing:
+
+Detected emotion class.
+
+Optional: A confidence score or visual chart (like a pie/donut chart or emotion radar).
+
+A history panel (optional) to show previously analyzed texts.
+
+Include engaging elements like icons, color-coded emotion responses, and micro-interactions.
+
+🧠 Back-End Requirements:
+Use Python (Flask / FastAPI) to serve the AI model.
+
+Load the pre-trained model (assumed to be trained on labeled emotion data).
+
+Expose a RESTful API endpoint like /predict:
+
+POST request with JSON body: { "text": "Your sentence here" }
+
+Response: { "emotion": "Happy", "confidence": 0.87 }
+
+Ensure the back end handles:
+
+Input preprocessing (same as training pipeline).
+
+UTF-8 encoding support for English text.
+
+Cross-Origin Resource Sharing (CORS) for front-end integration.
+
+🔧 Integration:
+Connect front end with back end using Axios or Fetch API.
+
+Ensure real-time feedback or loading animations during predictions.
+
+Deployable as a single app (e.g., Vercel for frontend + Render/Heroku for backend).
+
+✅ Optional Enhancements:
+Add emotion emojis or avatars based on results.
+
+Add voice input (speech-to-text) using Web APIs.
+
+Use localStorage to save session history.
+
+Export result as image/PDF for report generation.
